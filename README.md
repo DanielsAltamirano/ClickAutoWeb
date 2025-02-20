@@ -1,6 +1,6 @@
-# ClickAuto Web
+# ClickAuto 
 
-¡Bienvenido al repositorio de **ClickAuto Web**! 🚗💨
+¡Bienvenido al repositorio de **ClickAuto**! 🚗💨
 
 Este proyecto es un sitio web diseñado para la empresa **ClickAuto**, dedicada a la renta de autos. La web está desarrollada utilizando **HTML, CSS y JavaScript**, ofreciendo una experiencia visual atractiva y una navegación intuitiva para los clientes.
 
@@ -12,12 +12,10 @@ Este proyecto es un sitio web diseñado para la empresa **ClickAuto**, dedicada 
 ## 📂 Estructura del Proyecto
 ```
 📁 ClickAutoWeb/
-│── 📄 index.html       # Página principal
-│── 📁 css/             # Archivos de estilos
-│   ├── styles.css      # Estilos principales
-│── 📁 js/              # Archivos JavaScript
-│   ├── script.js       # Funcionalidad del sitio
-│── 📁 assets/          # Imágenes y otros recursos
+│── 📁 html/            # Página principal
+│── 📁 css/             # Estilos principales
+│── 📁 js/              # Funcionalidad del sitio
+│── 📁 recursos/        # Imágenes y otros recursos
 ```
 
 ## 🌟 Funcionalidades Principales
@@ -27,12 +25,8 @@ Este proyecto es un sitio web diseñado para la empresa **ClickAuto**, dedicada 
 - **Efectos dinámicos** con JavaScript para mejorar la experiencia del usuario.
 
 ## 📌 Cómo Ver el Proyecto
-Puedes clonar este repositorio y abrir el archivo `index.html` en tu navegador:
-```bash
-git clone https://github.com/DanielsAltamirano/ClickAutoWeb.git
-cd ClickAutoWeb
-start index.html
-```
+Puedes clonar este repositorio o visitar nuestra pagina web www.ClickAuto.mx en tu navegador
+
 
 ## 📞 Contacto
 Si tienes alguna pregunta o sugerencia, no dudes en comunicarte con nosotros.
