@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales</title>
+    <link rel="stylesheet" href="css/sucursales.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+            </div>
+            <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="#">Promos</a>
+                    <a href="sucursales.html">Sucursales</a>
+                    <a href="#">Vehículos</a>
+                    <a href="#">Contacto</a>
+
+                <button class="menu-btn"><i class="fas fa-bars"> ☰</i></button>
+            </div>
+        </nav>
+    </header>
+    
+<div class="container">
+    <section class="hero">
+        <h1>Oficinas para renta y entrega de autos</h1>
+    </section>
+    <p>Encuentra la oficina de ClickAuto para que puedas rentar o <br>recoger el auto de tus sueños y viajar a tu destino favorito.</p>
+    <br>
+    <section class="bar">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Encuentra la oficina más cercana🔍">
+            <button onclick="buscarOficina()">Buscar</button>
+        </div>
+    </section>
+    <br>
+    <section>
+        <p>Nuestras oficinas están disponibles para ti en diversos Estados de la República Mexicana,<br> localiza la que mejor se acople a tu ubicación, reserva el auto que desees <br> y recógelo al instante. A su vez, cerciórate de los detalles que el auto tiene en el momento de la entrega.</p>
+    </section>
+</div>
+    
+<section class="directorio">
+    <h2>Directorio</h2>
+    <div class="categorias" id="categorias">
+        <span class="activo" onclick="mostrarCiudades('A-E'); setActiveTab('A-E')">A-E</span>
+        <span onclick="mostrarCiudades('F-J'); setActiveTab('F-J')">F-J</span>
+        <span onclick="mostrarCiudades('K-O'); setActiveTab('K-O')">K-O</span>
+        <span onclick="mostrarCiudades('P-T'); setActiveTab('P-T')">P-T</span>
+        <span onclick="mostrarCiudades('U-Z'); setActiveTab('U-Z')">U-Z</span>
+    </div>
+    <div class="lista-ciudades" id="listaCiudades">
+        <!-- Las ciudades se mostrarán aquí como tabla -->
+    </div>
+</section>
+
+    <section class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8930667.797591059!2d-103.94843711211048!3d23.211109326650412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1743442363311!5m2!1ses-419!2smx" width="200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+    <footer>
+        <p>2025 ClickAuto - Todos los derechos reservados</p>
+    </footer>
+
+<script>
+const ciudades = {
+    'A-E': ["ACAPULCO", "CANCÚN", "CIUDAD DEL CARMEN", "COLIMA", "CUERNAVACA", "ESTADO DE MÉXICO", "AGUASCALIENTES", "CDMX", "CIUDAD JUÁREZ", "COSOLEACAQUE", "CULIACÁN", "CABO SAN LUCAS", "CHETUMAL", "CIUDAD OBREGÓN", "COZUMEL", "DURANGO", "CHIHUAHUA", "COATZACOALCOS", "CUAJIMALPA", "ENSENADA", "CAMPECHE", "MAZATLÁN", "TOLUCA", "VERACRUZ", "ZACATECAS"],
+    'F-J': ["HERMOSILLO", "MONTERREY", "GUADALAJARA", "TIJUANA", "PUEBLA", "LEÓN", "MORELIA", "ZACATECAS", "SAN LUIS POTOSÍ", "COLIMA", "NOGALES", "MEXICALI", "SALTILLO"],
+    'K-O': ["KARMELO", "OAXACA", "GUERRERO", "QUERETARO", "PUEBLA", "JALISCO", "ACAPULCO", "CANCÚN", "CIUDAD DEL CARMEN", "COLIMA", "CUERNAVACA", "ESTADO DE MÉXICO"],
+    'P-T': ["PUERTO VALLARTA", "TUXTLA", "TOLUCA", "TIJUANA", "VERACRUZ", "ACAPULCO", "CANCÚN", "CIUDAD DEL CARMEN", "COLIMA", "CUERNAVACA", "ESTADO DE MÉXICO"],
+    'U-Z': ["ZAMORA", "XALAPA", "ZACATECAS","ACAPULCO", "CANCÚN", "CIUDAD DEL CARMEN", "COLIMA", "CUERNAVACA", "ESTADO DE MÉXICO"]
+};
+
+function mostrarCiudades(categoria) {
+    const lista = ciudades[categoria];
+    let tablaHTML = `<table><tr><th colspan="5" class="encabezado">Ciudades</th></tr><tr>`; // Encabezado con 'Ciudades' que abarca todas las columnas
+    
+    lista.forEach((ciudad, index) => {
+        if (index % 5 === 0 && index !== 0) {
+            tablaHTML += `</tr><tr>`; // Nueva fila cada 5 ciudades
+        }
+        tablaHTML += `<td>${ciudad}</td>`;
+    });
+
+    tablaHTML += `</tr></table>`;
+    document.getElementById("listaCiudades").innerHTML = tablaHTML;
+}
+
+function setActiveTab(categoria) {
+    const tabs = document.querySelectorAll('.categorias span');
+    tabs.forEach(tab => {
+        tab.classList.remove('activo');
+    });
+
+    const activeTab = document.querySelector(`.categorias span:nth-child(${Object.keys(ciudades).indexOf(categoria) + 1})`);
+    activeTab.classList.add('activo');
+}
+
+// Mostrar las ciudades de la categoría 'A-E' al cargar la página
+mostrarCiudades('A-E');
+setActiveTab('A-E');
+</script>
+ <script>
+    document.querySelector(".menu-btn").addEventListener("click", function() {
+        document.querySelector(".nav-links").classList.toggle("active");
+    });
+
+ </script>
+</body>
+</html>
