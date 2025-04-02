@@ -28,7 +28,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    height: 150px; /* Ajusta la altura de la barra de navegación */
+    height: 90px; /* Ajusta la altura de la barra de navegación */
     width: 100%;
 }
 
