@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    width: 100%;
+    background-color: #2b70e4;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+nav {
+    position: relative;
+    background-image: url('../recursos/banner v1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 150px; /* Ajusta la altura de la barra de navegación */
+    width: 100%;
+}
+
+.nav-logo {
+    width: 20%; /* Ajusta este valor según el diseño */
+    max-width: 180px; /* Ajusta el tamaño máximo */
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Asegurar que los enlaces estén bien alineados */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* Espacio entre los botones */
+    padding-right: 10%;
+}
+
+/* Mejorar estilo de los enlaces */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #aec0e0;
+    transform: scale(1.05);
+}
+
+/* Ajustar el botón de menú */
+.menu-btn {
+    background: #67B1E2;
+    border: solid 0.1px rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 30%;
+    align-items: center;
+    padding: 8px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.logo {
+    height: 90px;
+    width: auto;
+    margin-right: 15px;
+    object-fit: contain;
+    object-position: 7px;
+}
+.tagline {
+    font-size: 16px;
+    font-style: italic;
+    color: #f0f0f0;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.login-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a62ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #1e4bd6;
+}
+.social-login button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.facebook { background-color: #4267B2 !important; }
+.google { background-color: #DB4437 !important; }
+.apple { background-color: #000 !important; }
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 50px;
+}
+.image-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+footer {
+    width: 100%;
+    background-color: #2b70e4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 100px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+a {
+    text-decoration: none;
+    color: #2a62ff;
+}
+a:hover {
+    text-decoration: underline;
+}

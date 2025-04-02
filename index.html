@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\styles.css">
-    <title>Index</title>
+    <title>ClickAuto</title>
+    <link rel="icon" type="image/x-icon" href="recursos/Logo Clickauto v1.png">  
+    <link rel="stylesheet" href="css/cstyles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="ClickAuto"></a>
+            <img src="logos.png" alt="Mi Logo">
         </div>
         <nav>
-            <a href="#">Promos</a>
-            <a href="sucursales.html">Sucursales</a>
-            <a href="#">Vehículos</a>
-            <a href="contacto.html">Contacto</a>
-            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            <ul>
+                
+                <li><a href="#">Promos</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="#">Vehículos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
+        <button class="sign-up" onclick="location.href='inicioSesion.html'">Sign Up</button>
     </header>
-    <div class="container">
-        <h2>Bienvenido a nuestra web de renta de autos</h2>
-        <p>Ofrecemos una amplia variedad de autos para satisfacer todas tus necesidades de transporte. Ya sea que necesites un auto compacto para la ciudad o un SUV para un viaje familiar, tenemos el auto perfecto para ti.</p>
-    </div>
-    <footer>
-        <p>&copy; 2025 ClickAuto. Todos los derechos reservados.</p>
-    </footer>
+    
+    <section class="hero">
+        <h1>¡Inicia tu viaje ideal!</h1>
+    </section>
+    
+    <section class="search-box">
+        <h2>Encuentra tu auto</h2>
+        <div class="search-fields">
+            <input type="text" placeholder="Ubicación de recogida">
+            <input type="date">
+            <input type="text" placeholder="Marca">
+            <button>Buscar</button>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="feature-item">
+            <img src="OIP (8).jpeg" alt="Encuentra el auto que buscas">
+            <p>Encuentra el auto que buscas</p>
+        </div>
+        <div class="feature-item">
+            <img src="OIP (7).jpeg" alt="Renta un auto de forma segura">
+            <p>Renta un auto de forma segura</p>
+        </div>
+        <div class="feature-item">
+            <img src="user-icon-on-transparent-background-free-png.webp" alt="Atención las 24 horas del día">
+            <p>Atención las 24 horas del día</p>
+        </div>
+    </section>
 </body>
 </html>
