@@ -4,45 +4,60 @@ body {
     padding: 0;
     background-color: #f8f9fa;
 }
-
 header {
+    background-color: #2b70e4;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 0 0 32px 32px;
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2b70e4;
-    padding: 15px 30px;
-    border-radius: 0 0 32px 32px;
-}
-
+  }
+  
 .logo img {
-    height: 90px;
+    height: auto;
+    max-height: 120px;
     width: auto;
-}
-
-nav ul {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-nav ul li a {
+  }
+  
+  .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
-}
-nav a:hover {
-    color: #aec0e0;
-    transform: scale(1.05);
-}
+    font-size: larger;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+  }
+  
+  .nav-links li a:hover {
+    transform: scale(1.1);
+    color: #79adeb66;
+  }
+
 .sign-up {
-    background-color: #6c63ff;
+    background-color: #4053e5;
     color: white;
-    padding: 10px 20px;
-    border: none;
+    font-weight: bold;
+    font-size: larger;
+    border: solid #4053e5 3px;
     border-radius: 5px;
     cursor: pointer;
+ 
 }
 
 .hero {
@@ -113,5 +128,5 @@ footer {
     text-align: center;
     padding: 1rem 0;
     border-radius: 25px 25px 0px 0px;
-    height: 10px;
+    margin-top: 2rem;
 }

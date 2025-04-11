@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucursales</title>
+    <title>ClickAuto - Sucursales</title>
     <link rel="stylesheet" href="css/sucursales.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="icon" type="image/x-icon" href="recursos/Logo Clickauto v1.png">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Krub:wght@400;700&family=Staatliches&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-logo">
-            </div>
-            <div class="nav-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="#">Promos</a>
-                    <a href="sucursales.html">Sucursales</a>
-                    <a href="#">Vehículos</a>
-                    <a href="#">Contacto</a>
-            </div>
-        </nav>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+              <img src="recursos/logos.png" alt="Logo" />
+            </a>
+            <ul class="nav-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="ofertas.html">Promos</a></li>
+              <li><a href="sucursales.html">Sucursales</a></li>
+              <li><a href="#vehiculos">Vehículos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
     </header>
-    
 <div class="container">
     <section class="hero">
         <h1>Oficinas para renta y entrega de autos</h1>
@@ -60,8 +65,8 @@
     </section>
     
     <footer>
-        2025 ClickAuto - Todos los derechos reservados
-    </footer>
+        <p>&copy; 2025 ClickAuto. Todos los derechos reservados.</p>
+      </footer>
 
 <script>
 const ciudades = {

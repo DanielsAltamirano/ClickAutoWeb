@@ -9,30 +9,21 @@
 </head>
 <body>
     <header>
-        
-        <nav>
-            <div class="nav-logo">
-            </div>
-            <div class="nav-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="#">Promos</a>
-                    <a href="sucursales.html">Sucursales</a>
-                    <a href="#">Vehículos</a>
-                    <a href="#">Contacto</a>
-            </div>
-        </nav>
-        <div class="logo-container">
-            <p class="tagline">"Tu viaje comienza con el auto perfecto"</p>
-        </div>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+              <img src="recursos/logos.png" alt="Logo" />
+            </a>
+           <p class="slogan"> " Tu viaje comienza con el auto perfecto " </p>
+          </nav>
     </header>
     <br>
-    <main>
+    <main class="">
         <div class="login-container">
             <h2>Bienvenido a ClickAuto</h2>
             <form>
                 <input type="text" placeholder="Usuario o Correo Electrónico" required>
                 <input type="password" placeholder="Contraseña" required>
-                <button type="submit">Iniciar Sesión</button>
+                <button type="submit" onclick="location.href='index.html'">Iniciar Sesión</button>
                 <label><input type="checkbox"> Recordarme</label> <br>
                 <br>
                 <a href="#">¿Olvidaste tu contraseña?</a>
@@ -52,7 +43,7 @@
     </main>
     <br>
     <footer>
-        2025 ClickAuto - Todos los derechos reservados
-    </footer>
+        <p>&copy; 2025 ClickAuto. Todos los derechos reservados.</p>
+      </footer>
 </body>
 </html>

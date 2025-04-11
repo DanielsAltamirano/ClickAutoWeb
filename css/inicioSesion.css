@@ -1,108 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: center; /* Centra verticalmente */
+    min-height: 100vh;       /* Altura mínima para ocupar toda la pantalla */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
 header {
-    width: 100%;
     background-color: #2b70e4;
-    color: white;
-    padding: 15px 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 0 0 32px 32px;
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0 0 50px 50px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-nav {
-    position: relative;
-    background-image: url('../recursos/banner v1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    height: 150px; /* Ajusta la altura de la barra de navegación */
-    width: 100%;
-}
-
-.nav-logo {
-    width: 20%; /* Ajusta este valor según el diseño */
-    max-width: 180px; /* Ajusta el tamaño máximo */
+  }
+  
+  .logo img {
     height: auto;
+    max-height: 120px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-links {
+    list-style: none;
     display: flex;
-    align-items: center;
-}
-
-
-.nav-logo img {
-    width: 100%;
-    height: auto;
-}
-
-/* Asegurar que los enlaces estén bien alineados */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 3rem; /* Espacio entre los botones */
-    padding-right: 10%;
-}
-
-/* Mejorar estilo de los enlaces */
-nav a {
+    gap: 20px;
+  }
+  
+  .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #aec0e0;
-    transform: scale(1.05);
-}
-
-/* Ajustar el botón de menú */
-.menu-btn {
-    background: #67B1E2;
-    border: solid 0.1px rgb(255, 255, 255);
+    font-size: larger;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+  }
+  
+  .nav-links li a:hover {
+    transform: scale(1.1);
+    color: #79adeb66;
+  }
+  .slogan{
+    font-size: 1rem;
+    font-family: 'Nexa Bold', sans-serif;
+    color: white;
     font-weight: bold;
-    font-size: 1.8rem;
-    cursor: pointer;
-    border-radius: 30%;
-    align-items: center;
-    padding: 8px;
-}
-.logo-container {
+    background-color: #5E96F4;
+    border-radius: 45px;
+
+  }
+  main {
     display: flex;
-    align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-.logo {
-    height: 90px;
-    width: auto;
-    margin-right: 15px;
-    object-fit: contain;
-    object-position: 7px;
-}
-.tagline {
-    font-size: 16px;
-    font-style: italic;
-    color: #f0f0f0;
-}
-main {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center; /* O space-around, si quieres separación */
     align-items: center;
     width: 90%;
     max-width: 1000px;
@@ -110,7 +72,9 @@ main {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+    margin: 20px 0; /* Opcional, da espacio entre header y footer */
+  }
+  
 .login-container {
     flex: 1;
     text-align: center;
@@ -151,6 +115,7 @@ button:hover {
 .facebook { background-color: #4267B2 !important; }
 .google { background-color: #DB4437 !important; }
 .apple { background-color: #000 !important; }
+
 .image-container {
     flex: 1;
     display: flex;
@@ -167,15 +132,7 @@ footer {
     background-color: #0056b3;
     color: white;
     width: 100%;
-    height: 10px;
     text-align: center;
     padding: 1rem 0;
     border-radius: 25px 25px 0px 0px;
-}
-a {
-    text-decoration: none;
-    color: #2a62ff;
-}
-a:hover {
-    text-decoration: underline;
 }

@@ -1,5 +1,11 @@
+html{
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -7,77 +13,54 @@ body {
 
 header {
     background-color: #2b70e4;
-    color: #fff;
-    padding: 1rem;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 0 0 32px 32px;
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-   padding-bottom: 30px;
-   border-radius: 0 0 32px 32px;
-
-}
-
-nav {
-    position: relative;
-    background-image: url('../recursos/banner v1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    height: 90px; /* Ajusta la altura de la barra de navegación */
-    width: 100%;
-}
-
-.nav-logo {
-    width: 20%; /* Ajusta este valor según el diseño */
-    max-width: 180px; /* Ajusta el tamaño máximo */
+  }
+  
+  .logo img {
     height: auto;
+    max-height: 120px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-links {
+    list-style: none;
     display: flex;
-    align-items: center;
-}
-
-
-.nav-logo img {
-    width: 100%;
-    height: auto;
-}
-
-/* Asegurar que los enlaces estén bien alineados */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 3rem; /* Espacio entre los botones */
-    padding-right: 10%;
-}
-
-/* Mejorar estilo de los enlaces */
-nav a {
+    gap: 20px;
+  }
+  
+  .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
-}
+    font-size: larger;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+  }
+  
+  .nav-links li a:hover {
+    transform: scale(1.1);
+    color: #79adeb66;
+  }
 
-nav a:hover {
-    color: #aec0e0;
-    transform: scale(1.05);
-}
-
-/* Ajustar el botón de menú */
-.menu-btn {
-    background: #67B1E2;
-    border: solid 0.1px rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.8rem;
-    cursor: pointer;
-    border-radius: 30%;
-    align-items: center;
-    padding: 8px;
+  @media (min-width:768px) {
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 /*######################*/
@@ -86,8 +69,9 @@ nav a:hover {
     word-spacing: 5px;
     line-height: 2;
     text-align: center;
-    font-weight: bold;
-    font-style: italic;
+    font-family: 'Segoe UI', sans-serif;
+   font-style: normal;
+   font-size: 25px;
 }
 .hero {
     text-align: center;
@@ -278,11 +262,11 @@ nav a:hover {
 }
 footer {
     background-color: #0056b3;
-    height: 10px;
     color: white;
     text-align: center;
     padding: 1rem 0;
     border-radius: 25px 25px 0px 0px;
+    margin-top: 2rem;
 }
 
 
