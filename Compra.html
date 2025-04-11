@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClickAuto - Renta de Autos</title>
+  <link rel="stylesheet" href="comsty.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logos.png" alt="Mi Logo">
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="#">Promos</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="#">Vehículos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="sign-up" onclick="location.href='inicioSesion.html'">Sign Up</button>
+    </header>
+
+    <br>
+
+  <main>
+    <section class="car-display">
+      <img src="versa.png" alt="Nissan Versa">
+      <div class="car-info">
+        <h2>$220.00/día</h2>
+        <p>
+          El Nissan Versa combina estilo, comodidad y eficiencia, con amplio espacio interior, excelente rendimiento de combustible y tecnología avanzada para un viaje seguro y conectado. ¡Perfecto para tu próxima renta!
+        </p>
+        
+      </div>
+    </section>
+
+    <div class="car-gallery">
+        <img src="frente.png" class="thumbnail" alt="Vista 1 del auto">
+        <img src="lado.png" class="thumbnail" alt="Vista 2 del auto">
+        <img src="atras.png" class="thumbnail" alt="Vista 3 del auto">        
+    </div>
+
+    <button class="rentar-btn" onclick="abrirReserva()">Rentar ahora</button>
+  </main>
+
+  <!-- Modal de Reserva -->
+  <!-- Modal de Reserva -->
+<div class="modal" id="modalReserva">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarReserva()">&times;</span>
+      <form id="formReserva" action="reservar.php" method="POST">
+        <h3>Reservar vehículo</h3>
+  
+        <label>Tipo de renta:</label>
+        <select name="tipo_renta" id="tipoRenta" onchange="mostrarCampos()">
+          <option value="dia">Por día</option>
+          <option value="km">Por kilómetro</option>
+        </select>
+  
+        <!-- Campos para Renta por Día -->
+        <div id="camposPorDia">
+          <label>Recolección:</label>
+          <input type="text" name="recoleccion_lugar" placeholder="¿Dónde necesitas tu auto?">
+          <input type="date" name="recoleccion_fecha">
+          <input type="time" name="recoleccion_hora" value="10:00">
+  
+          <label>Devolución:</label>
+          <input type="text" name="devolucion_lugar" placeholder="¿Dónde termina tu viaje?">
+          <input type="date" name="devolucion_fecha">
+          <input type="time" name="devolucion_hora" value="10:00">
+        </div>
+  
+        <!-- Campo para Renta por Kilómetro -->
+        <div id="camposPorKm" style="display:none;">
+          <label>Distancia estimada en km:</label>
+          <input type="number" name="kms_estimados" placeholder="Ej: 120" min="1">
+        </div>
+  
+        <label>Edad:</label>
+        <input type="number" name="edad" value="25" min="18">
+  
+        <label>Adultos:</label>
+        <input type="number" name="adultos" value="2" min="1">
+  
+        <label>Niños:</label>
+        <input type="number" name="ninos" value="0" min="0">
+  
+        <label>Tipo de vehículo:</label>
+        <select name="tipo_vehiculo">
+          <option value="todos">Todos</option>
+          <option value="compacto">Compacto</option>
+          <option value="SUV">SUV</option>
+        </select>
+  
+        <button type="submit">Reservar Ahora</button>
+      </form>
+    </div>
+  </div>
+  
+  <form id="form-reserva">
+    <!-- todos tus inputs -->
+  </form>
+  
+  
+
+  <script src="comjs.js"></script>
+</body>
+</html>
