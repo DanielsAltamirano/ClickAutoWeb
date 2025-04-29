@@ -1,0 +1,294 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2b70e4;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 0 0 32px 32px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: auto;
+    max-height: 120px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+}
+
+.nav-links li a:hover {
+    transform: scale(1.1);
+    color: #79adeb66;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    display: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: url('image\ 11.png') no-repeat center center/cover;
+    color: white;
+    height: 100px;
+}
+.hero img {
+    width: 800px;
+    height: 250px;
+    border-radius: 0;
+}
+
+.hero h2 {
+    color: #fff;
+    display: inline-block;
+    margin-top: 30px;
+    position: relative;
+}
+
+.buscador {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+}
+
+.buscador input {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.buscador button {
+    padding: 10px 20px;
+    background: #246db8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modelos {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.modelos .sub {
+    font-size: 0.9em;
+    max-width: 600px;
+    margin: auto;
+    color: #666;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 250px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+.reservar {
+    background: #246db8;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.pagination .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pagination .active {
+    background-color: #246db8;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 160px;
+    max-width: 200px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
+}
+
+.campo input[type="text"],
+.campo input[type="date"],
+.campo input[type="time"],
+.campo select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pasajeros {
+    min-width: 320px;
+}
+
+.pasajeros .grupo {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.pasajeros .grupo div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pasajeros span {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.pasajeros input[type="text"] {
+    text-align: center;
+    width: 40px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pasajeros button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 2px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.btn-reserva {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.btn-reserva:hover {
+    background-color: #0056b3;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventajas {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: #f1f1f1;
+}
+
+.ventaja {
+    text-align: center;
+    max-width: 200px;
+}
+
+.ventaja img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    background: #1e4db7;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
