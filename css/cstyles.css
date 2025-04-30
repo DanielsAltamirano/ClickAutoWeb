@@ -116,8 +116,7 @@ button {
 }
 
 .feature-item img {
-    width: 100px; /* Tamaño uniforme */
-    height: 100px; /* Tamaño uniforme */
+  
     object-fit: cover; /* Ajusta la imagen sin deformarla */
     margin-bottom: 10px;
     border-radius: 10px;
